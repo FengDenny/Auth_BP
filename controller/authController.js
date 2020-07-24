@@ -40,8 +40,8 @@ exports.getAllUsers = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            statsu: 'fail',
-            messagee: err
+            status: 'fail',
+            message: err
         })
     }
 }
@@ -49,22 +49,17 @@ exports.getAllUsers = async (req, res) => {
 
 // Get a user with their id
 
-exports.getUser = async (req, res) => {
-    try {
-        let query = await User.findById(req.params.id)
-        res.status(200).json({
-            status: 'success',
-            dats: {
-                user: query
-            }
-        })
-    } catch (err) {
-        res.status(400).json({
-            statsu: 'fail',
-            messagee: err
-        })
-    }
-}
+exports.getUser = CatchAsync(async (req, res) => {
+
+    let query = await User.findById(req.params.id)
+    res.status(200).json({
+        status: 'success',
+        dats: {
+            user: query
+        }
+    })
+
+})
 
 // Update a user with their id
 
@@ -84,8 +79,8 @@ exports.updateUser = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            statsu: 'fail',
-            messagee: err
+            status: 'fail',
+            message: err
         })
     }
 
@@ -103,7 +98,7 @@ exports.deleteUser = async (req, res) => {
         })
     } catch (err) {
         res.status(400).json({
-            statsu: 'fail',
+            status: 'fail',
             messagee: err
         })
     }
