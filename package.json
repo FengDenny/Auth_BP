@@ -4,8 +4,8 @@
   "description": "MERN stack boiler plate login/signup system",
   "main": "Server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+    "start": "nodemon server.js",
+    "start:prod": "SET NODE_ENV=production&&nodemon server.js"
   },
   "author": "Denny Feng",
   "license": "MIT",
