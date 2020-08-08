@@ -23,7 +23,11 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/email_verified" component={ConfirmSignup} />
           <Route exact path="/forgotPassword" component={ForgotPassword} />
-          <Route exact path="/password_reset" component={ResetPassword} />
+          <Route
+            exact
+            path="/password_reset/:token"
+            component={ResetPassword}
+          />
           <Route exact path="/sent" component={Redirect} />
           <Route component={NotFound} />
         </Switch>
