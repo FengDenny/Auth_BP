@@ -34,13 +34,13 @@
 
 /* Password */
 .form-grid label:nth-child(4) {
-    margin-top: 11rem;
+    margin-top: 12rem;
     margin-left: -0.8rem;
 }
 
 /* Password Confirm */
 .form-grid label:nth-child(5) {
-    margin-top: 16.5rem;
+    margin-top: 19.5rem;
     margin-left: -0.8rem;
 }
 
@@ -63,7 +63,7 @@
 .signup-content input[type=password]:nth-child(4),
 .signup-content input[type=submit]:nth-child(5) {
     margin-left: -2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100%;
 }
 
