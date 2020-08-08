@@ -64,4 +64,20 @@ input::placeholder {
     width: 200px !important;
     margin-top: 1.5rem;
 
+
+}
+
+
+.reset-content p {
+    color: grey;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-top: -1.5rem;
+}
+
+.reset-content p>a {
+    color: #c86e5f;
+    margin-left: 0.5rem;
+    text-decoration: underline;
 }
