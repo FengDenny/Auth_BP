@@ -1,0 +1,72 @@
+.signup-content {
+    height: 65%;
+}
+
+.signup-content h1 {
+    color: #c86e5f;
+    margin-right: 2rem;
+    margin-top: -1rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    margin-top: 3rem;
+}
+
+/* First name */
+.form-grid label:nth-child(1) {
+    margin-left: -0.8rem;
+}
+
+
+
+/* Last name */
+.form-grid label:nth-child(2) {
+    margin-left: 15.5rem;
+}
+
+/* Email */
+.form-grid label:nth-child(3) {
+    margin-top: 6rem;
+    margin-left: -0.8rem;
+}
+
+/* Password */
+.form-grid label:nth-child(4) {
+    margin-top: 11rem;
+    margin-left: -0.8rem;
+}
+
+/* Password Confirm */
+.form-grid label:nth-child(5) {
+    margin-top: 16.5rem;
+    margin-left: -0.8rem;
+}
+
+
+/* Fist Name input */
+.form-grid input[type=text]:nth-child(6) {
+    margin-left: -1.2rem;
+    width: 95%
+}
+
+/* Last Name input */
+.form-grid input[type=text]:nth-child(7) {
+    width: 95%;
+    margin-left: -0.2rem;
+}
+
+/* Email/ Password/ Password confirm/ signup btn input */
+.signup-content input[type=text]:nth-child(2),
+.signup-content input[type=password]:nth-child(3),
+.signup-content input[type=password]:nth-child(4),
+.signup-content input[type=submit]:nth-child(5) {
+    margin-left: -2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.signup-content input[type=submit]:nth-child(5) {
+    margin-top: -1rem;
+}

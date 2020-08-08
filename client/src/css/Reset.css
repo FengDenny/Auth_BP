@@ -1,0 +1,67 @@
+.reset .reset-content,
+.confirmed .confirmed-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.reset-content h1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3.6rem;
+    color: #c86e5f;
+}
+
+.reset-content h2 {
+    font-size: 1.1rem;
+    color: grey;
+    font-weight: 350;
+    padding: 1.5rem;
+    margin-left: 2.2rem;
+}
+
+
+.reset-content form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.5rem;
+
+
+}
+
+.reset-content span {
+    display: flex;
+    line-height: 2.5rem;
+}
+
+.reset-content input[type=email] {
+    width: 400px;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    color: #c86e5f;
+    border: 1px solid #c86e5f;
+    box-shadow: 5px 5px 10px #6d6d6d73;
+    border-radius: 10px;
+    outline: none;
+}
+
+.reset-content input[type=email]:focus {
+    border: 3px solid #a0594c;
+}
+
+.reset-content input[type=email]:invalid {
+    border: 3px solid red;
+}
+
+input::placeholder {
+    padding: 0.5rem;
+}
+
+.reset-content input[type=submit] {
+    width: 200px !important;
+    margin-top: 1.5rem;
+
+}

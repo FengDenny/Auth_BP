@@ -1,0 +1,33 @@
+.redirect-content {
+    height: 100%;
+    color: grey
+}
+
+.redirect-content span {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: #c86e5f;
+    text-decoration: underline
+}
+
+.redirect-content h2,
+.redirect-content p {
+    display: flex;
+    align-self: start;
+    margin-left: 0.2rem;
+}
+
+.redirect-content h2,
+.redirect-content p {
+    font-size: 1.2rem;
+}
+
+.redirect-content p {
+    margin-top: 2rem;
+}
+
+.redirect-content p>a {
+    margin-left: 0.5rem;
+    color: #c86e5f;
+    text-decoration: underline
+}
