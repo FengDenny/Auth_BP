@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../../css/Reset.css';
 
 class SendToken extends Component {
@@ -32,6 +33,7 @@ class SendToken extends Component {
         <div className="reset-content">
           <header>
             <h1>Forgot your password?</h1>
+
             <h2>
               Tell us your registered email, so we can start resetting
               <span> your password with AuthBP </span>
@@ -49,6 +51,9 @@ class SendToken extends Component {
 
               <input type="submit" value="Reset" />
             </form>
+            <p>
+              Misclicked? <Link to="/login">Sign in</Link>
+            </p>
           </section>
         </div>
       </div>
