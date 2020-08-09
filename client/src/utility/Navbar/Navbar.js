@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom';
 import '../../css/Navbar.css';
 
 class Navbar extends Component {
+  handleSignInDelay = (e) => {
+    e.preventDefault();
+    setTimeout(function () {
+      window.location.assign('/login');
+    }, 1500);
+  };
+
   handleSignUpDelay = (e) => {
     e.preventDefault();
     setTimeout(function () {
@@ -23,6 +30,13 @@ class Navbar extends Component {
           <ul>
             <div className="nav">
               <Link to="/">Home</Link>
+              <Link
+                to="/login"
+                onClick={this.handleSignInDelay}
+                className="signin-btn"
+              >
+                Sign in
+              </Link>
               <Link
                 to="/signup"
                 onClick={this.handleSignUpDelay}
