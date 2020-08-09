@@ -8,8 +8,11 @@ import SendGrid from '../images/sendgrid.png';
 import SendGridReset from '../images/sendgridReset.png';
 import MailTrap from '../images/mailtrap.png';
 import MailTrapReset from '../images/mailtrapReset.png';
-
 import '../css/Hero.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(faArrowDown);
 
 class Hero extends Component {
   handleLogInDelay = (e) => {
@@ -39,13 +42,11 @@ class Hero extends Component {
           <div className="hero">
             <div className="hero-content">
               <h1>Authentication Boiler Plate </h1>
-              <Link
-                to="/login"
-                onClick={this.handleLogInDelay}
-                className="login-btn"
-              >
-                Login
-              </Link>
+              <p>
+                Check out the functionalities of an Authentication system with
+                AuthBP
+              </p>
+              <FontAwesomeIcon icon={faArrowDown} />
             </div>
           </div>
         </header>
