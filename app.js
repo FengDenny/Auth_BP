@@ -2,9 +2,11 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const userRoutes = require('./routes/userRoutes');
+const helmet = require('helmet');
 const AppError = require('./utils/appError');
 const cors = require('cors');
 const UniversalErrorHandler = require('./controller/errorController');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -30,7 +32,15 @@ app.set('view', path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
 // GLOBAL MIDDLEWARE
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+    headers: ['Content-Length', 'Content-Type', 'Authorization'],
+  })
+);
+app.use(cookieParser());
+app.use(helmet());
 // Access-Cross-Allow-Origin *
 app.options('*', cors());
 
