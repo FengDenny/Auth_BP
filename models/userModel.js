@@ -30,6 +30,7 @@ const userSchema = new mongoose.Schema({
     default: false,
     select: false,
   },
+
   passwordConfirm: {
     type: String,
     required: [true, 'Please, confirm your password'],
