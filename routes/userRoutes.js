@@ -16,7 +16,7 @@ router.get('/signup/:token', authController.confirmSignup);
 // @route POST api/users/login
 // @desc User login
 // @access Public
-router.post('/login', authController.login);
+router.post('/login', authController.isLoggedIn, authController.login);
 
 // @route GET api/users/logout
 // @desc User logout
@@ -28,9 +28,9 @@ router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
 // auth needed after this route
-// router.use(authController.protect)
+// router.use(authController.protect);
 
-router.route('/').get(userController.getAllUsers);
+router.route('/').get(authController.isLoggedIn, userController.getAllUsers);
 
 // @route GET api/users/:id
 // @desc GET a user, UPDATE user, DELETE user by their id
