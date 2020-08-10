@@ -29,15 +29,37 @@ a {
 
 /* Navbar links */
 .nav {
+  display: flex;
   padding: 2rem;
   margin-right: 20rem;
   text-transform: uppercase;
+}
+
+.nav li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  margin-left: 2rem;
+  color: #fff
 }
 
 .nav a {
 
   color: #fff;
   padding: 1rem;
+}
+
+
+/* Sign out button */
+.nav .signout-btn {
+  color: #ff856f;
+  margin-left: 1rem;
+}
+
+.nav .signout-btn:active {
+  box-shadow: 0 1px #a0594c !important;
+
 }
 
 /* Sign in button */
@@ -50,7 +72,8 @@ a {
   color: #9b5448
 }
 
-.nav .signin-btn:active {
+.nav .signin-btn:active,
+.nav .signout-btn:active {
   display: inline-block;
   color: #a0594c;
   box-shadow: 0 5px #a0594c;
