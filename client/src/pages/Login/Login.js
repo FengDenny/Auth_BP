@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import '../../css/Login.css';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import regAction from '../../actions/regAction';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 class Login extends Component {
   state = {
@@ -24,6 +28,14 @@ class Login extends Component {
     };
     const res = await axios.post(url, data);
     const token = res.data.token;
+
+    if (res.data.status === 'success') {
+      swal({
+        title: 'Success!',
+        icon: 'success',
+      });
+      this.props.regAction(res.data);
+    }
   };
 
   render() {
@@ -69,4 +81,14 @@ class Login extends Component {
     );
   }
 }
-export default Login;
+
+function mapDispatchToProps(dispatcher) {
+  return bindActionCreators(
+    {
+      regAction: regAction,
+    },
+    dispatcher
+  );
+}
+
+export default connect(null, mapDispatchToProps)(Login);

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import regAction from '../../actions/regAction';
+import swal from 'sweetalert';
 import '../../css/Signup.css';
 
 class Signup extends Component {
@@ -36,9 +40,17 @@ class Signup extends Component {
       passwordConfirm: this.state.passwordConfirm,
     };
     const res = await axios.post(url, data);
+    if (res.data.status === 'success') {
+      swal({
+        title: 'Signed up Successfully!',
+        icon: 'success',
+      });
+      this.props.regAction(res.data);
+    }
   };
 
   render() {
+    console.log(this.props.auth.newUser);
     return (
       <div className="signup">
         <div className="signup-content">
@@ -112,4 +124,19 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+  };
+}
+
+function mapDispatchToProps(dispatcher) {
+  return bindActionCreators(
+    {
+      regAction: regAction,
+    },
+    dispatcher
+  );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);
