@@ -62,4 +62,5 @@ class ResetPassword extends Component {
     );
   }
 }
+
 export default ResetPassword;
