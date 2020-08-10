@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logoutAction from '../../actions/logoutAction';
 import { bindActionCreators } from 'redux';
+import axios from 'axios';
 import '../../css/Navbar.css';
 
 class Navbar extends Component {
@@ -21,6 +21,18 @@ class Navbar extends Component {
     }, 1500);
   };
 
+  logout = async () => {
+    try {
+      const url = 'https://localhost:3001/api/users/logout';
+
+      const res = await axios.get(url, { withCredentials: true });
+      // clear cookie and logout using redux
+      this.props.logoutAction();
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   render() {
     console.log(this.props.auth.email);
     return (
@@ -34,14 +46,11 @@ class Navbar extends Component {
           <ul>
             <div className="nav">
               <Link to="/">Home</Link>
+
               {this.props.auth.email ? (
                 <>
-                  <li>hello,{this.props.auth.email}</li>
-                  <Link
-                    to="/login"
-                    onClick={this.handleSignInDelay}
-                    className="signin-btn"
-                  >
+                  <li>Hello, {this.props.auth.firstName}</li>
+                  <Link to="" onClick={this.logout} className="signout-btn">
                     Sign out
                   </Link>
                 </>
