@@ -94,10 +94,10 @@ class Hero extends Component {
                     Already have an account?
                     <Link
                       to="/login"
-                      onClick={this.handleSignUpDelay}
+                      onClick={this.handleLogInDelay}
                       className="p-link-1"
                     >
-                      Login
+                      Sign in
                     </Link>
                   </span>
                 </p>
