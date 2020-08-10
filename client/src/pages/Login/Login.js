@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import regAction from '../../actions/regAction';
 import { Link } from 'react-router-dom';
+import '../../css/sweetAlert.css';
 import swal from 'sweetalert';
 
 class Login extends Component {
@@ -20,21 +21,26 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state.email);
     console.log(this.state.password);
-
-    const url = 'https://localhost:3001/api/users/login';
-    const data = {
-      email: this.state.email,
-      password: this.state.password,
-    };
-    const res = await axios.post(url, data);
-    const token = res.data.token;
-
-    if (res.data.status === 'success') {
+    try {
+      const url = 'https://localhost:3001/api/users/login';
+      const data = {
+        email: this.state.email,
+        password: this.state.password,
+      };
+      const res = await axios.post(url, data, { withCredentials: true });
+      const token = res.data.token;
+      if (res.data.status === 'success') {
+        swal({
+          title: 'Success!',
+          icon: 'success',
+        });
+        this.props.regAction(res.data);
+      }
+    } catch (err) {
       swal({
-        title: 'Success!',
-        icon: 'success',
+        title: err.response.data.message,
+        icon: 'error',
       });
-      this.props.regAction(res.data);
     }
   };
 
