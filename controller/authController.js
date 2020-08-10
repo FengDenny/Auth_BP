@@ -5,7 +5,6 @@ const AppError = require('../utils/appError');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const Email = require('../utils/email');
-const { use } = require('../routes/userRoutes');
 
 const signToken = (id) => {
   return jwt.sign(
@@ -22,6 +21,7 @@ const signToken = (id) => {
 // generate  token for the user so it will remember them
 const createToken = (user, statusCode, res) => {
   const token = signToken(user._id);
+
   const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
@@ -29,10 +29,8 @@ const createToken = (user, statusCode, res) => {
     httpOnly: true,
   };
   //  cookieOptions = false so the token will not expires
-  if (process.env.NODE_ENV == 'production') cookieOptions = false;
+  if (process.env.NODE_ENV === 'production') cookieOptions.secure = false;
   res.cookie('jwt', token, cookieOptions);
-  // Remove password from output
-  user.password = undefined;
 
   // 201 status code = created
   res.status(statusCode).json({
@@ -43,7 +41,6 @@ const createToken = (user, statusCode, res) => {
     },
   });
 };
-
 exports.signup = CatchAsync(async (req, res, next) => {
   // To check a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter
   const passReq = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
@@ -76,6 +73,7 @@ exports.signup = CatchAsync(async (req, res, next) => {
       res.status(201).json({
         status: 'success',
         message: 'Verification Token sent to email!',
+        token,
         newUser,
       });
     } catch (err) {
@@ -109,7 +107,6 @@ exports.confirmSignup = CatchAsync(async (req, res, next) => {
   await user.save({
     validateBeforeSave: false,
   });
-
   // // jwt token
   if (process.env.NODE_ENV === 'production') {
     createToken(user, 200, res);
@@ -120,12 +117,15 @@ exports.confirmSignup = CatchAsync(async (req, res, next) => {
 
 exports.login = CatchAsync(async (req, res, next) => {
   const { email, password } = req.body;
+  // 1) Check if email and password exist
 
   if (!email || !password) {
-    return next(new AppError('Please provide a email and password'), 400);
+    return next(new AppError('Please provide email and password', 400));
   }
-  // check if user exist and password is correct
+
+  //   2) Check if user exist && password is correct
   // .select(+password): to select the field that are false in the user model
+
   const user = await User.findOne({
     email,
   })
@@ -133,21 +133,18 @@ exports.login = CatchAsync(async (req, res, next) => {
     .select('-__v');
 
   if (!user || !(await user.correctPassword(password, user.password))) {
-    return next(
-      new AppError(`Incorrect email or password. Please, try again`),
-      401
-    );
+    return next(new AppError('Incorrect email or password', 401));
   }
 
-  // send token, if auth succeeds
+  // 3) if everything is good, send token to client
   createToken(user, 200, res);
 });
 
 // secure logging out user
 exports.logout = (req, res) => {
   res.cookie('jwt', 'loggedout', {
-    // JWT expires in 10 sec
-    expires: new Date(Date.now() + 10 * 1000),
+    // expires in 10 secs
+    expires: new Date(Date.now() * 10 * 100),
     httpOnly: true,
   });
   res.status(200).json({
@@ -283,3 +280,33 @@ exports.protect = CatchAsync(async (req, res, next) => {
   res.locals.user = currentUser;
   next();
 });
+
+// Only for rendered pages, no errors!
+exports.isLoggedIn = async (req, res, next) => {
+  if (req.cookies.jwt) {
+    try {
+      // 2) Verification token
+      const decoded = await promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET
+      );
+      // 3) Check if user still exists
+      const currentUser = await User.findById(decoded.id);
+
+      if (!currentUser) {
+        return next();
+      }
+      // 4) Check if user changed password after the token was issued
+
+      if (currentUser.changedPasswordAfter(decoded.iat)) {
+        return next();
+      }
+      // There is a logged in USER
+      res.locals.user = currentUser;
+      return next();
+    } catch (err) {
+      return next();
+    }
+  }
+  next();
+};
