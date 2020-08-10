@@ -1,0 +1,81 @@
+.swal-overlay--show-modal .swal-modal {
+
+    background-color: #c86e5f;
+}
+
+.swal-icon--success {
+    border-color: #c86e5f;
+}
+
+.swal-icon--success__line {
+    background-color: #fff
+}
+
+
+.swal-icon--success__ring {
+
+    border: 4px solid #fff;
+    left: -9px;
+    top: 5px;
+}
+
+.swal-icon--success:before {
+    top: -11.5px;
+    left: -29.5px;
+    background-color: #c86e5f
+}
+
+.swal-icon--success:after {
+    border-radius: 0 120px 120px 0;
+    top: -9px;
+    left: 30px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 60px;
+    transform-origin: 0 60px;
+    -webkit-animation: rotatePlaceholder 4.25s ease-in;
+    animation: rotatePlaceholder 4.25s ease-in;
+    background-color: #c86e5f
+}
+
+.swal-icon--success__hide-corners {
+
+    background-color: #c86e5f;
+
+}
+
+.swal-icon--success__line--long {
+    width: 47px;
+    right: 8px;
+    top: 49px;
+}
+
+.swal-icon--success__line--tip {
+    left: 14px;
+    top: 57px;
+}
+
+.swal-title {
+    color: #fff;
+}
+
+.swal-button {
+    background-color: #fff;
+    width: 100px;
+    color: #c86e5f;
+    outline: none;
+}
+
+.swal-button:not([disabled]):hover {
+
+    background-color: #f57e6ca9;
+    color: #fff;
+    outline: none
+}
+
+.swal-button-container {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
