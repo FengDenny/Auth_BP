@@ -59,9 +59,9 @@ class Hero extends Component {
               <div className="section-p secondary-heading ">
                 <h1>Sign in</h1>
                 <p>
-                  You have the ability to see how the sign in system works.
+                  You have the ability to see how the sign in system works. To
+                  start, logging in, create an account:
                   <span>
-                    To start, logging in, create an account:
                     <Link
                       to="/signup"
                       onClick={this.handleSignUpDelay}
@@ -69,8 +69,8 @@ class Hero extends Component {
                     >
                       Sign up now
                     </Link>
+                    to see the protected route!
                   </span>
-                  <span> to see the protected route!</span>
                 </p>
               </div>
             </div>
@@ -80,16 +80,14 @@ class Hero extends Component {
                 <h1>Sign up</h1>
                 <p>
                   To see, how this functionality works:
-                  <span>
-                    <Link
-                      to="/signup"
-                      onClick={this.handleSignUpDelay}
-                      className="p-link-1"
-                    >
-                      Sign up now
-                    </Link>
-                    to get started.
-                  </span>
+                  <Link
+                    to="/signup"
+                    onClick={this.handleSignUpDelay}
+                    className="p-link-1"
+                  >
+                    Sign up now
+                  </Link>
+                  to get started.
                   <span>
                     Already have an account?
                     <Link
@@ -112,7 +110,7 @@ class Hero extends Component {
                 <h1>Password Reset</h1>
                 <p>
                   Already have an account, but have forgotten your password?
-                  <span>Authentication Boiler Plate got you covered!</span>
+                  Authentication Boiler Plate got you covered!
                   <span>
                     Simply, click on
                     <Link
@@ -123,7 +121,7 @@ class Hero extends Component {
                       Forgot password
                     </Link>
                     to reset your password!
-                  </span>
+                  </span>{' '}
                 </p>
               </div>
             </div>
@@ -138,8 +136,8 @@ class Hero extends Component {
                 you to choose from, but, I happened to have chosen pug for mine.
                 <span>
                   Start implementing your own email functionality with pug using
-                  <a href="https://sendgrid.com/">SendGrid.</a> It's so simple
-                  and easy to do! Trust me!
+                  <a href="https://sendgrid.com/">SendGrid.</a>
+                  It's so simple and easy to do! Trust me!
                 </span>
               </p>
             </div>
@@ -156,8 +154,8 @@ class Hero extends Component {
               <h1>Pug Development Template</h1>
               <p>
                 If you're not ready for production, you can always use
-                <a href="https://mailtrap.io/">Mailtrap</a>to test before
-                deployment! It's that easy!
+                <a href="https://mailtrap.io/">Mailtrap</a>
+                to test before deployment! It's that easy!
               </p>
             </div>
             <div className="img-3">
