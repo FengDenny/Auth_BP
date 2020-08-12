@@ -21,6 +21,12 @@ a {
   justify-content: space-between;
 }
 
+/* navbar checkbox */
+.navbar input[type="checkbox"] {
+  visibility: hidden
+}
+
+
 /* Navbar logo */
 .navbar .Active {
   color: #fff;
@@ -41,15 +47,13 @@ a {
   flex-direction: column;
   text-transform: capitalize;
   margin-left: 2rem;
-  color: #fff
+  color: #fff;
 }
 
 .nav a {
-
   color: #fff;
   padding: 1rem;
 }
-
 
 /* Sign out button */
 .nav .signout-btn {
@@ -59,17 +63,16 @@ a {
 
 .nav .signout-btn:active {
   box-shadow: 0 1px #a0594c !important;
-
 }
 
 /* Sign in button */
 
 .nav .signin-btn {
-  color: #c86e5f
+  color: #c86e5f;
 }
 
 .nav .signin-btn:hover {
-  color: #9b5448
+  color: #9b5448;
 }
 
 .nav .signin-btn:active,
@@ -79,7 +82,6 @@ a {
   box-shadow: 0 5px #a0594c;
   transform: translateY(4px);
 }
-
 
 /* .nav .login-btn {
     z-index: 1;
@@ -108,13 +110,11 @@ a {
     transition: 0.1s;
 } */
 
-
-
 /* sign up button */
 .nav .signup-btn {
   border: 2px solid #c86e5f;
   border-radius: 10px;
-  padding: 10px;
+  padding: 14px;
   cursor: pointer;
   margin-left: 1rem;
 }
@@ -130,4 +130,146 @@ a {
   background-color: #a0594c;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    background-color: var(--bg-color-transparent);
+    width: 100%;
+    height: 7%;
+  }
+
+  .nav {
+    margin-right: 2rem;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar .Active {
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+
+  }
+
+  /* hide the nav links */
+  .navbar .nav {
+    visibility: hidden;
+    margin-top: 9.5rem;
+    margin-right: 0;
+  }
+
+  .nav .signup-btn {
+    padding: 11px;
+    margin-right: 1rem;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .navbar input[type="checkbox"] {
+    visibility: visible;
+    position: absolute;
+    top: 10px;
+    right: 26px;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .navbar .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 26px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  /* hamburger Lines */
+  .navbar .hamburger>div {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* top and bottom Lines */
+  .navbar .hamburger>div:before,
+  .navbar .hamburger>div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+
+  }
+
+  /* To move bottom line downwards */
+  .navbar .hamburger>div:after {
+    top: 10px;
+  }
+
+  /* checkbox animated */
+  .navbar .toggle:checked+.hamburger>div {
+    transform: rotate(135deg);
+  }
+
+  /* turn lines into X */
+  .navbar .toggle:checked+.hamburger>div:before,
+  .navbar .toggle:checked+.hamburger>div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .navbar .toggle:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+  }
+
+  /* show the links inside nav */
+  .navbar .toggle:checked~.nav {
+    visibility: visible;
+  }
+
+  /* scale the nav first div  */
+  .navbar .toggle:checked~.nav>div {
+    transform: scale(1.05);
+    transition-duration: var(--menu-speed);
+  }
+
+  /* transition the background-color inside ul */
+  .navbar .toggle:checked~.nav>div>nav>ul {
+    background-color: rgba(0, 0, 0, 0.664);
+    transition: background-color 0.4s ease;
+    height: 13rem;
+    width: 15rem;
+    margin-right: -1.6rem;
+  }
+
+  /* transform the links inside of nav div */
+  .navbar .nav>div {
+    transform: scale(0.1);
+    transition: all 0.5s ease;
+  }
+
 }
