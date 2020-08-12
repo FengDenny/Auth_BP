@@ -408,6 +408,10 @@ section h1 {
 
 @media screen and (max-width: 768px) {
 
+  .hero-content svg {
+    top: 50rem;
+  }
+
   /* section-content */
   .section-content-1,
   .section-content-2,
@@ -520,6 +524,9 @@ section h1 {
 
 
 @media screen and (max-width: 480px) {
+  .hero-content svg {
+    top: 45rem;
+  }
 
   .navbar .Active {
     left: -2rem !important;
@@ -617,7 +624,7 @@ section h1 {
 
   /* footer */
   .footer {
-    margin-top: 0;
+    margin-top: 3.85rem;
   }
 
   .footer h1 {
