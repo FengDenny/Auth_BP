@@ -28,4 +28,5 @@ code {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   --box-shadow: 0 0 10px 2px rgb(172, 171, 171);
   --red-shadow: 2px 2px 5px 2px rgba(204, 125, 125, 0.24);
+  --menu-speed: 0.75s;
 }
