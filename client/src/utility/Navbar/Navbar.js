@@ -42,35 +42,43 @@ class Navbar extends Component {
             <h1 className="Active">AuthBP</h1>
           </Link>
         </div>
-        <nav>
-          <ul>
-            <div className="nav">
-              <Link to="/">Home</Link>
+        <input type="checkbox" className="toggle" />
+        <div className="hamburger">
+          <div></div>
+        </div>
+        <div className="nav">
+          <div>
+            <nav>
+              <ul>
+                <div>
+                  <Link to="/">Home</Link>
 
-              {this.props.auth.email ? (
-                <>
-                  <li>Hello, {this.props.auth.firstName}</li>
-                  <Link to="" onClick={this.logout} className="signout-btn">
-                    Sign out
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/login"
-                    onClick={this.handleSignInDelay}
-                    className="signin-btn"
-                  >
-                    Sign in
-                  </Link>
-                  <Link to="/signup" className="signup-btn">
-                    Sign up, For Free
-                  </Link>
-                </>
-              )}
-            </div>
-          </ul>
-        </nav>
+                  {this.props.auth.email ? (
+                    <>
+                      <li>Hello, {this.props.auth.firstName}</li>
+                      <Link to="" onClick={this.logout} className="signout-btn">
+                        Sign out
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        to="/login"
+                        onClick={this.handleSignInDelay}
+                        className="signin-btn"
+                      >
+                        Sign in
+                      </Link>
+                      <Link to="/signup" className="signup-btn">
+                        Sign up, For Free
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     );
   }
