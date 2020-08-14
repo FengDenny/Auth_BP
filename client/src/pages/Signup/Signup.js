@@ -70,9 +70,27 @@ class Signup extends Component {
                   Email
                 </label>
                 <label htmlFor="password" className="secondary-heading">
-                  Password (between 6 to 20 characters which contain at least
-                  one numeric digit, one uppercase and one lowercase letter)
+                  Password
                 </label>
+                <label
+                  htmlFor="password"
+                  className=" password-verification    secondary-heading"
+                >
+                  - between 6 to 20 characters
+                </label>
+                <label
+                  htmlFor="password"
+                  className=" password-verification   secondary-heading"
+                >
+                  - containing at least one numeric digit
+                </label>
+                <label
+                  htmlFor="password"
+                  className=" password-verification   secondary-heading"
+                >
+                  - one uppercase and one lowercase letter
+                </label>
+
                 <label htmlFor="password confirm" className="secondary-heading">
                   Confirm Your Password
                 </label>
