@@ -41,6 +41,10 @@ a {
   text-transform: uppercase;
 }
 
+.nav .nav-auth {
+  display: flex;
+}
+
 .nav li {
   display: flex;
   justify-content: center;
@@ -273,4 +277,22 @@ a {
     transition: all 0.5s ease;
   }
 
+}
+
+@media screen and (max-width:375px) {
+
+  .navbar {
+    height: 10%;
+  }
+
+  .navbar input[type="checkbox"],
+  .navbar .hamburger {
+    top: 0.5rem;
+  }
+
+  .navbar .Active {
+
+    top: 0.8rem;
+
+  }
 }
