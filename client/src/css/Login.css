@@ -117,9 +117,11 @@ input::placeholder {
     color: #c86e5f;
 }
 
-/* iPhone */
+/* Media Queries */
 @media screen and (min-width:1200px) {
-    .login-content {
+
+    .login-content,
+    .signup-content {
         width: 40%;
     }
 
@@ -130,7 +132,9 @@ input::placeholder {
 
 
 @media screen and (max-width:1200px) {
-    .login-content {
+
+    .login-content,
+    .signup-content {
         width: 75%;
     }
 
@@ -173,10 +177,15 @@ input::placeholder {
 
 
 
-@media screen and (max-width:325px) {
+@media screen and (max-width:320px) {
+
+    .login-content h1 {
+        margin-top: -3rem;
+    }
 
     .login-content {
         height: 70%;
+        font-size: 0.8rem;
     }
 
     .login-forgot {
