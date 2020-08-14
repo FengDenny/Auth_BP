@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import logoutAction from '../../actions/logoutAction';
 import { bindActionCreators } from 'redux';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 import '../../css/Navbar.css';
 
 class Navbar extends Component {
@@ -50,12 +51,14 @@ class Navbar extends Component {
           <div>
             <nav>
               <ul>
-                <div>
+                <div className="nav-auth">
                   <Link to="/">Home</Link>
 
                   {this.props.auth.email ? (
                     <>
-                      <li>Hello, {this.props.auth.firstName}</li>
+                      <li>
+                        <Link to="">Hello, {this.props.auth.firstName}</Link>
+                      </li>
                       <Link to="" onClick={this.logout} className="signout-btn">
                         Sign out
                       </Link>
