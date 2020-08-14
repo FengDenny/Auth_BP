@@ -43,6 +43,7 @@ a {
 
 .nav .nav-auth {
   display: flex;
+  flex-direction: column;
 }
 
 .nav li {
@@ -294,5 +295,22 @@ a {
 
     top: 0.8rem;
 
+  }
+}
+
+@media screen and (max-width:320px) {
+
+  .navbar input[type="checkbox"],
+  .navbar .hamburger {
+    top: 0rem;
+  }
+
+  .navbar .Active {
+    font-size: 1.2rem;
+    margin-left: 9.2rem;
+  }
+
+  .navbar {
+    height: 8%;
   }
 }
