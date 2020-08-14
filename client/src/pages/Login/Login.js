@@ -7,6 +7,7 @@ import regAction from '../../actions/regAction';
 import { Link } from 'react-router-dom';
 import '../../css/sweetAlert.css';
 import swal from 'sweetalert';
+import Helmet from 'react-helmet';
 
 class Login extends Component {
   state = {
@@ -45,47 +46,66 @@ class Login extends Component {
   };
 
   render() {
+    const title = `${window.title}`;
     return (
-      <div className="login">
-        <div className="login-content">
-          <header>
-            <h1>Sign in</h1>
-          </header>
-          <section>
-            <form onSubmit={this.submitLogin}>
-              <label htmlFor="email" className="secondary-heading">
-                Email Address
-              </label>
-              <input
-                type="text"
-                id="email"
-                onChange={this.logEmail}
-                value={this.state.email}
-                placeholder="JohnDoe@example.com"
-              />
-              <label htmlFor="password" className="secondary-heading">
-                Password
-              </label>
-              <Link to="/forgotPassword" className="login-forgot">
-                Forgot password?
-              </Link>
-              <input
-                type="password"
-                id="password"
-                onChange={this.logPassword}
-                value={this.state.password}
-                placeholder="*********"
-              />
-              <input type="submit" value="Sign in" />
-              <p>
-                Need an account? <Link to="/signup">Sign up now</Link>
-              </p>
-            </form>
-          </section>
+      <>
+        <Helmet>
+          <title>
+            {title} |{' '}
+            {this.props.auth.firstName + ' ' + this.props.auth.lastName}
+          </title>
+          <meta
+            name="description"
+            content={this.props.auth.firstName + ' ' + this.props.auth.lastName}
+          />
+        </Helmet>
+        <div className="login">
+          <div className="login-content">
+            <header>
+              <h1>Sign in</h1>
+            </header>
+            <section>
+              <form onSubmit={this.submitLogin}>
+                <label htmlFor="email" className="secondary-heading">
+                  Email Address
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  onChange={this.logEmail}
+                  value={this.state.email}
+                  placeholder="JohnDoe@example.com"
+                />
+                <label htmlFor="password" className="secondary-heading">
+                  Password
+                </label>
+                <Link to="/forgotPassword" className="login-forgot">
+                  Forgot password?
+                </Link>
+                <input
+                  type="password"
+                  id="password"
+                  onChange={this.logPassword}
+                  value={this.state.password}
+                  placeholder="*********"
+                />
+                <input type="submit" value="Sign in" />
+                <p>
+                  Need an account? <Link to="/signup">Sign up now</Link>
+                </p>
+              </form>
+            </section>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
+}
+
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+  };
 }
 
 function mapDispatchToProps(dispatcher) {
@@ -97,4 +117,4 @@ function mapDispatchToProps(dispatcher) {
   );
 }
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
