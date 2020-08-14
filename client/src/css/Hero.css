@@ -600,7 +600,7 @@ section h1 {
 
   /* footer */
   .footer {
-    margin-top: 3.85rem;
+    margin-top: 4rem;
   }
 
   .footer h1 {
@@ -612,6 +612,7 @@ section h1 {
   .hero-content svg {
     top: 35rem;
   }
+
   .section-content-1,
   .section-content-2,
   .section-content-3 {
@@ -626,6 +627,7 @@ section h1 {
   .section-p-2:nth-child(2) {
     margin-top: 4rem;
   }
+
   .section-content-1 .section-p p,
   .section-content-2 .section-p-2 p,
   .section-content-3 .section-p-2 p,
@@ -640,6 +642,7 @@ section h1 {
     margin-top: 3rem;
   }
 }
+
 @media screen and (max-width: 320px) {
   .hero-content svg {
     top: 30rem;
@@ -650,13 +653,16 @@ section h1 {
   .section-content-3 {
     height: 50vh;
   }
+
   .section-content-4,
   .section-content-5 {
     height: 60vh;
   }
+
   .section-p-2:nth-child(2) {
     margin-top: 4rem;
   }
+
   .section-content-1 .section-p p,
   .section-content-2 .section-p-2 p,
   .section-content-3 .section-p-2 p,
@@ -664,10 +670,12 @@ section h1 {
   .section-content-5 .section-p p {
     margin-top: -1rem;
   }
+
   .section-p-2 a {
     padding: 0.8rem;
     margin-left: 0rem;
   }
+
   .section-p-2 span a {
     margin-top: -0.8rem;
   }
