@@ -28,7 +28,24 @@ router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
 // auth needed after this route
-// router.use(authController.protect);
+router.use(authController.protect);
+
+// @route GET api/users/update_password
+// @desc Update User Password
+// @access Private
+router.patch('/update_password', authController.updateUserPassword);
+
+// @route GET api/users/update_information
+// @desc Update User Email, first name and last name
+// @access Private
+
+router.patch('/update_information', userController.updateNonPasswords);
+
+router.get(
+  '/user_account_settings',
+  userController.getCurrentUser,
+  userController.getUser
+);
 
 router.route('/').get(authController.isLoggedIn, userController.getAllUsers);
 
