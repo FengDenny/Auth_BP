@@ -6,8 +6,8 @@ import { bindActionCreators } from 'redux';
 import regAction from '../../actions/regAction';
 import { Link } from 'react-router-dom';
 import '../../css/sweetAlert.css';
-import swal from 'sweetalert';
 import Helmet from 'react-helmet';
+import swal from 'sweetalert';
 
 class Login extends Component {
   state = {
@@ -51,7 +51,7 @@ class Login extends Component {
       <>
         <Helmet>
           <title>
-            {title} |{' '}
+            {title} |
             {this.props.auth.firstName + ' ' + this.props.auth.lastName}
           </title>
           <meta

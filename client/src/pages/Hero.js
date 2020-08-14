@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import Signup from '../images/Sign up.png';
 import Signin from '../images/Sign in.png';
 import Login from '../images/Log in.png';
@@ -36,8 +37,14 @@ class Hero extends Component {
   };
 
   render() {
+    const title = `${window.title}`;
     return (
       <>
+        <Helmet>
+          <title>
+            {title} | Authentication system functionalities overview
+          </title>
+        </Helmet>
         <header>
           <div className="hero">
             <div className="hero-content">
