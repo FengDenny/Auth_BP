@@ -1,5 +1,5 @@
 .signup-content {
-    height: 65%;
+    height: 75%;
 }
 
 .signup-content h1 {
@@ -13,6 +13,10 @@
     grid-template-columns: 250px 250px;
     margin-top: 3rem;
 }
+
+/* .form-grid .password-verification {
+    display: none;
+} */
 
 /* First name */
 .form-grid label:nth-child(1) {
@@ -28,31 +32,50 @@
 
 /* Email */
 .form-grid label:nth-child(3) {
-    margin-top: 6rem;
+    margin-top: 6.5rem;
     margin-left: -0.8rem;
 }
 
 /* Password */
 .form-grid label:nth-child(4) {
-    margin-top: 12rem;
+    margin-top: 13rem;
     margin-left: -0.8rem;
 }
 
-/* Password Confirm */
+
+/* Between 6 to 20 char */
 .form-grid label:nth-child(5) {
     margin-top: 19.5rem;
     margin-left: -0.8rem;
 }
 
+/* One numeric digit*/
+.form-grid label:nth-child(6) {
+    margin-top: 21.5rem;
+    margin-left: -0.8rem;
+}
+
+/* One uppercase and lowercase*/
+.form-grid label:nth-child(7) {
+    margin-top: 23.5rem;
+    margin-left: -0.8rem;
+}
+
+/* password confirmation*/
+.form-grid label:nth-child(8) {
+    margin-top: 27rem;
+    margin-left: -0.8rem;
+}
+
 
 /* Fist Name input */
-.form-grid input[type=text]:nth-child(6) {
+.form-grid input[type=text]:nth-child(9) {
     margin-left: -1.2rem;
     width: 95%
 }
 
 /* Last Name input */
-.form-grid input[type=text]:nth-child(7) {
+.form-grid input[type=text]:nth-child(10) {
     width: 95%;
     margin-left: -0.2rem;
 }
@@ -69,4 +92,257 @@
 
 .signup-content input[type=submit]:nth-child(5) {
     margin-top: -1rem;
+}
+
+.signup-content input[type=password]:nth-child(4) {
+    margin-top: 10rem;
+}
+
+/* Media Queries */
+
+
+@media screen and (max-width: 480px) {
+
+    .signup .signup-content {
+        margin-top: 1.5rem;
+    }
+
+    .signup-content {
+        width: 90%;
+        height: 77%
+    }
+
+    .signup-content h1 {
+        margin-top: 1rem;
+    }
+
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .form-grid label:nth-child(1),
+    .form-grid label:nth-child(2),
+    .form-grid label:nth-child(3),
+    .form-grid label:nth-child(4),
+    .form-grid label:nth-child(5),
+    .form-grid label:nth-child(6),
+    .form-grid label:nth-child(7),
+    .form-grid label:nth-child(8) {
+        margin-left: 1.3rem;
+    }
+
+    /* First name */
+    .form-grid label:nth-child(1) {
+        margin-top: -1rem;
+    }
+
+    /* Last name */
+    .form-grid label:nth-child(2) {
+        margin-top: 2.5rem;
+    }
+
+    /* Email */
+    .form-grid label:nth-child(3) {
+        margin-top: 6.2rem;
+    }
+
+    /* Password */
+    .form-grid label:nth-child(4) {
+        margin-top: 10rem;
+    }
+
+
+    /* Between 6 to 20 char */
+    .form-grid label:nth-child(5) {
+        margin-top: 13.5rem;
+    }
+
+    /* One numeric digit*/
+    .form-grid label:nth-child(6) {
+        margin-top: 14.5rem;
+
+    }
+
+    /* One uppercase and lowercase*/
+    .form-grid label:nth-child(7) {
+        margin-top: 15.5rem;
+
+    }
+
+    /* password confirmation*/
+    .form-grid label:nth-child(8) {
+        margin-top: 17.2rem;
+    }
+
+    .signup-content input[type=password]:nth-child(4) {
+        margin-top: 3.5rem !important;
+    }
+
+    /* First name/Last name */
+    .form-grid input[type=text]:nth-child(9),
+    .form-grid input[type=text]:nth-child(10) {
+        width: 80%;
+        margin-left: 1rem;
+        height: 22px;
+    }
+
+    .form-grid input[type=text]:nth-child(9),
+    .form-grid input[type=text]:nth-child(10) {
+        margin-top: 0.2rem;
+    }
+
+    /* Email,Password, Password Confirm, Submit ubtton */
+    .signup-content input[type=text]:nth-child(2),
+    .signup-content input[type=password]:nth-child(3),
+    .signup-content input[type=password]:nth-child(4),
+    .signup-content input[type=submit]:nth-child(5) {
+        margin-left: -2rem;
+        margin-top: 0.2rem;
+        width: 80%;
+        height: 22px;
+    }
+
+    /* Already have an account p */
+    .signup-content p {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 1.6rem;
+        margin-top: 0.5rem
+    }
+
+    .signup-content p>a {
+        padding: 0.4rem;
+        margin-top: -0.45rem;
+    }
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+
+    .signup .signup-content {
+        margin-top: 0rem;
+    }
+
+    .signup-content {
+        top: 52.5%;
+        width: 90%;
+        height: 88%;
+
+    }
+
+    .signup-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .form-grid label:nth-child(1),
+    .form-grid label:nth-child(2),
+    .form-grid label:nth-child(3),
+    .form-grid label:nth-child(4),
+    .form-grid label:nth-child(5),
+    .form-grid label:nth-child(6),
+    .form-grid label:nth-child(7),
+    .form-grid label:nth-child(8) {
+        margin-left: 1.3rem;
+        font-size: 0.6rem;
+    }
+
+    /* First name */
+    .form-grid label:nth-child(1) {
+        margin-top: -2rem;
+    }
+
+    /* Last name */
+    .form-grid label:nth-child(2) {
+        margin-top: 2.5rem;
+    }
+
+    /* Email */
+    .form-grid label:nth-child(3) {
+        margin-top: 6.2rem;
+    }
+
+    /* Password */
+    .form-grid label:nth-child(4) {
+        margin-top: 10rem;
+    }
+
+
+    /* Between 6 to 20 char */
+    .form-grid label:nth-child(5) {
+        margin-top: 13.5rem;
+    }
+
+    /* One numeric digit*/
+    .form-grid label:nth-child(6) {
+        margin-top: 14.5rem;
+
+    }
+
+    /* One uppercase and lowercase*/
+    .form-grid label:nth-child(7) {
+        margin-top: 15.5rem;
+
+    }
+
+    /* password confirmation*/
+    .form-grid label:nth-child(8) {
+        margin-top: 17.2rem;
+    }
+
+    .signup-content input[type=password]:nth-child(4) {
+        margin-top: 3.5rem !important;
+    }
+
+    /* First name/Last name */
+    .form-grid input[type=text]:nth-child(9),
+    .form-grid input[type=text]:nth-child(10) {
+        width: 80%;
+        margin-left: 1rem;
+        height: 22px;
+    }
+
+    .form-grid input[type=text]:nth-child(9),
+    .form-grid input[type=text]:nth-child(10) {
+        margin-top: 0rem;
+    }
+
+    /* Email,Password, Password Confirm, Submit ubtton */
+    .signup-content input[type=text]:nth-child(2),
+    .signup-content input[type=password]:nth-child(3),
+    .signup-content input[type=password]:nth-child(4),
+    .signup-content input[type=submit]:nth-child(5) {
+        margin-left: -2rem;
+        margin-top: 0.2rem;
+        width: 80%;
+        height: 22px;
+    }
+
+    /* Already have an account p */
+    .signup-content p {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 1.6rem;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+
+    }
+
+    .signup-content p>a {
+        padding: 0.4rem;
+        margin-top: -0.42rem;
+    }
+
+
 }
