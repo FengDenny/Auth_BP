@@ -116,3 +116,72 @@ input::placeholder {
     padding: 0.2rem;
     color: #c86e5f;
 }
+
+/* iPhone */
+@media screen and (min-width:1200px) {
+    .login-content {
+        width: 40%;
+    }
+
+    .login-forgot {
+        margin-left: 16rem;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .login-content {
+        width: 75%;
+    }
+
+    .login-forgot {
+        margin-left: 18rem;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .login-forgot {
+        margin-left: 18rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .login-content label {
+        margin-top: 0.2rem
+    }
+
+    .login-forgot {
+        margin-top: 0rem;
+        margin-left: 8rem;
+    }
+
+
+
+}
+
+@media screen and (max-width:375px) {
+
+    .login-content {
+        height: 60%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:325px) {
+
+    .login-content {
+        height: 70%;
+    }
+
+    .login-forgot {
+        margin-top: -0.1rem;
+        margin-left: 6.5rem;
+    }
+
+}
