@@ -51,7 +51,7 @@ class Login extends Component {
       <>
         <Helmet>
           <title>
-            {title} |
+            {title} |{' '}
             {this.props.auth.firstName + ' ' + this.props.auth.lastName}
           </title>
           <meta
