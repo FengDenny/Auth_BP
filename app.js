@@ -5,6 +5,7 @@ const userRoutes = require('./routes/userRoutes');
 const helmet = require('helmet');
 const AppError = require('./utils/appError');
 const cors = require('cors');
+const compression = require('compression');
 const UniversalErrorHandler = require('./controller/errorController');
 const cookieParser = require('cookie-parser');
 
@@ -23,6 +24,9 @@ app.use(
     limit: '10kb',
   })
 );
+
+app.use(compression());
+
 // setting up template engine with express
 app.set('view engine', 'pug');
 app.set('view', path.join(__dirname, 'views'));
