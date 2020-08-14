@@ -5,7 +5,7 @@
   "main": "Server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\""
@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "concurrently": "^5.2.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
