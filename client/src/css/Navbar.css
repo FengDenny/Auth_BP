@@ -43,7 +43,7 @@ a {
 
 .nav .nav-auth {
   display: flex;
-  flex-direction: column;
+
 }
 
 .nav li {
@@ -146,6 +146,7 @@ a {
     height: 7%;
   }
 
+
   .nav {
     margin-right: 2rem;
   }
@@ -161,6 +162,12 @@ a {
     left: 0rem;
 
   }
+
+  .nav .nav-auth {
+    display: flex;
+    flex-direction: column;
+  }
+
 
   /* hide the nav links */
   .navbar .nav {
@@ -294,6 +301,7 @@ a {
   .navbar .Active {
 
     top: 0.8rem;
+    right: 2.5rem;
 
   }
 }
@@ -306,8 +314,8 @@ a {
   }
 
   .navbar .Active {
-    font-size: 1.2rem;
-    margin-left: 9.2rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
   }
 
   .navbar {

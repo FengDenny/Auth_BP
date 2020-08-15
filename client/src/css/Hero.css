@@ -203,7 +203,7 @@ section h1 {
 .section-content-1 img,
 .section-content-2 img,
 .section-content-3 img {
-  max-width: 250px;
+  max-width: 400px;
   /* center an image */
   display: block;
   /* veritical (top), horizontal (left,right)*/
@@ -609,8 +609,9 @@ section h1 {
 }
 
 @media screen and (max-width: 375px) {
+
   .hero-content svg {
-    top: 35rem;
+    top: 50rem;
   }
 
   .section-content-1,
@@ -644,9 +645,7 @@ section h1 {
 }
 
 @media screen and (max-width: 320px) {
-  .hero-content svg {
-    top: 30rem;
-  }
+
 
   .section-content-1,
   .section-content-2,

@@ -185,12 +185,17 @@ input::placeholder {
 
     .login-content {
         height: 70%;
+        width: 90%;
         font-size: 0.8rem;
     }
 
     .login-forgot {
         margin-top: -0.1rem;
-        margin-left: 6.5rem;
+        margin-left: 10.5rem;
+    }
+
+    .footer h1 {
+        font-size: 0.8rem;
     }
 
 }
