@@ -76,19 +76,19 @@ class Signup extends Component {
                   htmlFor="password"
                   className=" password-verification    secondary-heading"
                 >
-                  - between 6 to 20 characters
+                  - Between 6 to 20 characters
                 </label>
                 <label
                   htmlFor="password"
                   className=" password-verification   secondary-heading"
                 >
-                  - containing at least one numeric digit
+                  - Containing at least one numeric digit
                 </label>
                 <label
                   htmlFor="password"
                   className=" password-verification   secondary-heading"
                 >
-                  - one uppercase and one lowercase letter
+                  - One uppercase and one lowercase letter
                 </label>
 
                 <label htmlFor="password confirm" className="secondary-heading">
