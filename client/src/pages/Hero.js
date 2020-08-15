@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import Signup from '../images/Sign up.png';
 import Signin from '../images/Sign in.png';
-import Login from '../images/Log in.png';
 import Reset from '../images/Password Reset.png';
 import SendGrid from '../images/sendgrid.png';
 import SendGridReset from '../images/sendgridReset.png';
@@ -13,6 +12,7 @@ import '../css/Hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { sign } from 'jsonwebtoken';
 library.add(faArrowDown);
 
 class Hero extends Component {
@@ -62,7 +62,7 @@ class Hero extends Component {
           <div>
             {/* Login */}
             <div className="section-content-1">
-              <img src={Signin} alt="Sign up" />
+              <img src={Signin} alt="Sign in" />
               <div className="section-p secondary-heading ">
                 <h1>Sign in</h1>
                 <p>
