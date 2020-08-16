@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import '../../css/Login.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import regAction from '../../actions/regAction';
-import { Link } from 'react-router-dom';
 import '../../css/sweetAlert.css';
 import Helmet from 'react-helmet';
 import swal from 'sweetalert';
-
+import '../../css/Login.css';
 class Login extends Component {
   state = {
     email: '',
@@ -30,12 +29,16 @@ class Login extends Component {
       };
       const res = await axios.post(url, data, { withCredentials: true });
       const token = res.data.token;
+      console.log(token);
       if (res.data.status === 'success') {
         swal({
           title: 'Success!',
           icon: 'success',
         });
         this.props.regAction(res.data);
+        setTimeout(function () {
+          window.location.assign('/user_account_settings');
+        }, 3000);
       }
     } catch (err) {
       swal({
@@ -50,10 +53,7 @@ class Login extends Component {
     return (
       <>
         <Helmet>
-          <title>
-            {title} |{' '}
-            {this.props.auth.firstName + ' ' + this.props.auth.lastName}
-          </title>
+          <title>{title} | User sign in</title>
           <meta
             name="description"
             content={this.props.auth.firstName + ' ' + this.props.auth.lastName}
@@ -89,7 +89,9 @@ class Login extends Component {
                   value={this.state.password}
                   placeholder="*********"
                 />
+
                 <input type="submit" value="Sign in" />
+
                 <p>
                   Need an account? <Link to="/signup">Sign up now</Link>
                 </p>
