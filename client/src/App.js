@@ -11,6 +11,7 @@ import ForgotPassword from './pages/ForgotPassword/SendToken';
 import Redirect from './pages/ForgotPassword/Redirect';
 import ResetPassword from './pages/ForgotPassword/ResetPassword';
 import NotFound from './pages/404Page/NotFound';
+import updateSettings from './pages/AccountSettings/UpdateAccount';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={Hero} />
           <Route exact path="/login" component={Login} />
+          <Route
+            exact
+            path="/user_account_settings"
+            component={updateSettings}
+          />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/email_verified" component={ConfirmSignup} />
           <Route exact path="/forgotPassword" component={ForgotPassword} />
