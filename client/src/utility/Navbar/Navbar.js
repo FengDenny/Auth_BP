@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import logoutAction from '../../actions/logoutAction';
 import { bindActionCreators } from 'redux';
 import axios from 'axios';
-import Helmet from 'react-helmet';
+import logoutAction from '../../actions/logoutAction';
 import '../../css/Navbar.css';
 
 class Navbar extends Component {
@@ -35,7 +34,6 @@ class Navbar extends Component {
   };
 
   render() {
-    console.log(this.props.auth.email);
     return (
       <div className="navbar">
         <div>
@@ -57,7 +55,9 @@ class Navbar extends Component {
                   {this.props.auth.email ? (
                     <>
                       <li>
-                        <Link to="">Hello, {this.props.auth.firstName}</Link>
+                        <Link to="/user_account_settings">
+                          Hello, {this.props.auth.firstName}
+                        </Link>
                       </li>
                       <Link to="" onClick={this.logout} className="signout-btn">
                         Sign out
