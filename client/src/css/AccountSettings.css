@@ -1,0 +1,333 @@
+.account-content {
+    height: 80%;
+}
+
+.signup-content h1,
+.account-content h1 {
+    color: #c86e5f;
+    margin-right: 2rem;
+    margin-top: -1rem;
+}
+
+
+.account-content .form-grid label:nth-child(3),
+.account-content .form-grid label:nth-child(4),
+.account-content .form-grid label:nth-child(5),
+.account-content .form-grid label:nth-child(6),
+.account-content .form-grid label:nth-child(7),
+.account-content .form-grid label:nth-child(8),
+.account-content .form-grid label:nth-child(9) {
+    margin-left: 2rem;
+}
+
+
+/* FORM LABEL START */
+
+/* First name */
+.account-content .form-grid label:nth-child(1) {
+    margin-left: 1.7rem;
+}
+
+
+
+/* Last name */
+.account-content .form-grid label:nth-child(2) {
+    margin-left: 19.2rem;
+}
+
+/* Email */
+.account-content .form-grid label:nth-child(3) {
+    margin-top: 6.5rem;
+}
+
+/* Password current */
+.account-content .form-grid label:nth-child(4) {
+    margin-top: 15.5rem;
+}
+
+
+/* Password*/
+.account-content .form-grid label:nth-child(5) {
+    margin-top: 20.5rem;
+}
+
+/* Between 6 to 20 char */
+.account-content .form-grid label:nth-child(6) {
+    margin-top: 25.5rem;
+    font-size: 0.8rem
+}
+
+/* One numeric digit*/
+.account-content .form-grid label:nth-child(7) {
+    margin-top: 27rem;
+    font-size: 0.8rem
+}
+
+/* One uppercase and lowercase*/
+.account-content .form-grid label:nth-child(8) {
+    margin-top: 28.5rem;
+    font-size: 0.8rem
+}
+
+/* password confirmation*/
+.account-content .form-grid label:nth-child(9) {
+    margin-top: 31rem;
+}
+
+/* FORM LABEL END */
+
+/* USER INFO FORM */
+
+/* Fist Name input */
+.account-content .form-grid input[type=text]:nth-child(10) {
+    margin-left: 1.5rem;
+    width: 95%
+}
+
+/* Last Name input */
+.account-content .form-grid input[type=text]:nth-child(11) {
+    width: 95%;
+    margin-left: 3.3rem;
+}
+
+
+
+/* Email Password  */
+.account-content input[type=text]:nth-child(2) {
+    margin-left: 0rem;
+    margin-top: 2rem;
+    width: 90%;
+}
+
+/* Save Changes Button */
+.account-content input[type=submit]:nth-child(3) {
+    margin-top: 0rem;
+}
+
+/* PASSWORD FORM  */
+
+/* Password current */
+.account-content input[type=password]:nth-child(1) {
+    margin-top: 2rem;
+}
+
+/* Password */
+.account-content input[type=password]:nth-child(2) {
+    margin-top: 1rem;
+}
+
+/* Password confirm */
+.account-content input[type=password]:nth-child(3) {
+    margin-top: 6rem;
+}
+
+/* Password Change */
+.account-content input[type=submit]:nth-child(4) {
+    margin-top: 0rem;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width:1024px) {
+    .account-content {
+        width: 80%;
+    }
+
+    .account-content .form-grid input[type=text]:nth-child(10) {
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    .account-content .form-grid input[type=text]:nth-child(11) {
+        width: 100%;
+        margin-left: 10.3rem;
+    }
+
+    .account-content .form-grid label:nth-child(1) {
+        margin-left: 2rem;
+    }
+
+    .account-content .form-grid label:nth-child(2) {
+        margin-left: 26.2rem;
+    }
+
+    .account-content .form-grid label:nth-child(4) {
+        margin-top: 23rem;
+    }
+
+    .account-content .form-grid label:nth-child(5) {
+        margin-top: 28.5rem;
+    }
+
+    .account-content .form-grid label:nth-child(6) {
+        margin-top: 33.5rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(7) {
+        margin-top: 35rem;
+
+    }
+
+
+    .account-content .form-grid label:nth-child(8) {
+        margin-top: 36.5rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(9) {
+        margin-top: 39rem;
+    }
+
+    .account-content input[type=password]:nth-child(1) {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .account-content {
+        height: 85%;
+    }
+
+
+    .account-content .form-grid input[type=text]:nth-child(11) {
+        width: 100%;
+        margin-left: 5.3rem;
+    }
+
+}
+
+@media screen and (max-width:375px) {
+    .account-content {
+        width: 95%;
+    }
+
+    .account-content h1 {
+        color: #c86e5f;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        margin-top: 0.6rem;
+    }
+
+    .form-grid {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .account-content .form-grid input[type=text]:nth-child(10),
+    .account-content .form-grid input[type=text]:nth-child(11),
+    .account-content input[type=text]:nth-child(2),
+    .account-content input[type=text]:nth-child(3),
+    .account-content input[type=submit]:nth-child(3),
+    .account-content input[type=password]:nth-child(1),
+    .account-content input[type=password]:nth-child(2),
+    .account-content input[type=password]:nth-child(3),
+    .account-content input[type=password]:nth-child(4),
+    .account-content input[type=submit]:nth-child(4) {
+        width: 60%;
+        height: 20px;
+    }
+
+    .account-content .form-grid input[type=text]:nth-child(10) {
+        margin-left: 0;
+
+    }
+
+    .account-content .form-grid input[type=text]:nth-child(11) {
+
+        margin-left: 0.3rem;
+        margin-top: 0;
+
+    }
+
+    .account-content input[type=text]:nth-child(2) {
+        margin-left: 0rem;
+        margin-top: 0rem;
+
+    }
+
+    .account-content input[type=submit]:nth-child(3),
+    .account-content input[type=submit]:nth-child(4) {
+        margin-top: 0rem;
+        height: 25px;
+    }
+
+    .account-content .form-grid label:nth-child(1),
+    .account-content .form-grid label:nth-child(3),
+    .account-content .form-grid label:nth-child(4),
+    .account-content .form-grid label:nth-child(5),
+    .account-content .form-grid label:nth-child(6),
+    .account-content .form-grid label:nth-child(7),
+    .account-content .form-grid label:nth-child(8),
+    .account-content .form-grid label:nth-child(9) {
+        left: 2.5rem;
+    }
+
+    .account-content .form-grid label:nth-child(1) {
+        top: 0rem;
+    }
+
+    .account-content .form-grid label:nth-child(2) {
+        top: 0rem;
+        margin-left: -9rem !important;
+    }
+
+    .account-content .form-grid label:nth-child(3) {
+        margin-top: 5.8rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(4) {
+        margin-top: 19rem;
+
+
+    }
+
+    .account-content .form-grid label:nth-child(5) {
+        margin-top: 27.5rem;
+    }
+
+    .account-content .form-grid label:nth-child(6) {
+
+        margin-top: 34rem;
+        font-size: 0.6rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(7) {
+        margin-top: 35.5rem;
+        font-size: 0.6rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(8) {
+        margin-top: 37rem;
+        font-size: 0.6rem;
+
+    }
+
+    .account-content .form-grid label:nth-child(9) {
+        margin-top: 39.5rem;
+    }
+
+    .account-content input[type=password]:nth-child(1) {
+        margin-top: 1.5rem;
+    }
+
+    .account-content input[type=password]:nth-child(2) {
+        margin-top: 1rem;
+
+    }
+
+    .account-content input[type=password]:nth-child(3) {
+        margin-top: 2.4rem;
+
+    }
+
+
+
+}
