@@ -57,7 +57,8 @@
 }
 
 .login-content label,
-.signup-content label {
+.signup-content label,
+.account-content label {
     color: grey;
     position: absolute;
     display: flex;
@@ -67,8 +68,10 @@
 
 .login-content input[type=text],
 .signup-content input[type=text],
+.account-content input[type=text],
 .login-content input[type=password],
-.signup-content input[type=password] {
+.signup-content input[type=password],
+.account-content input[type=password] {
     width: 90%;
     padding: 12px;
     margin: 30px 0;
