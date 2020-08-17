@@ -153,32 +153,27 @@
     }
 
     .account-content .form-grid label:nth-child(4) {
-        margin-top: 23rem;
+        position: absolute;
+        top: 20rem;
+        left: 4rem;
     }
 
     .account-content .form-grid label:nth-child(5) {
-        margin-top: 28.5rem;
+        position: absolute;
+        top: 21rem;
+        left: 4rem;
     }
 
-    .account-content .form-grid label:nth-child(6) {
-        margin-top: 33.5rem;
-
-    }
-
-    .account-content .form-grid label:nth-child(7) {
-        margin-top: 35rem;
-
-    }
-
-
-    .account-content .form-grid label:nth-child(8) {
-        margin-top: 36.5rem;
-
-    }
-
+    .account-content .form-grid label:nth-child(6),
+    .account-content .form-grid label:nth-child(7),
+    .account-content .form-grid label:nth-child(8),
     .account-content .form-grid label:nth-child(9) {
-        margin-top: 39rem;
+        position: absolute;
+        top: 21rem;
+        left: 4rem;
+
     }
+
 
     .account-content input[type=password]:nth-child(1) {
         margin-top: 10rem;
@@ -190,6 +185,27 @@
         height: 85%;
     }
 
+    .account-content .form-grid label:nth-child(4) {
+        position: absolute;
+        top: 13rem;
+        left: 0;
+    }
+
+    .account-content .form-grid label:nth-child(5) {
+        position: absolute;
+        top: 14rem;
+        left: 0;
+    }
+
+
+    .account-content .form-grid label:nth-child(6),
+    .account-content .form-grid label:nth-child(7),
+    .account-content .form-grid label:nth-child(8),
+    .account-content .form-grid label:nth-child(9) {
+        position: absolute;
+        top: 14rem;
+        left: 0rem;
+    }
 
     .account-content .form-grid input[type=text]:nth-child(11) {
         width: 100%;
@@ -198,135 +214,427 @@
 
 }
 
-@media screen and (max-width:375px) {
-    .account-content {
-        width: 95%;
-        height: 84%;
-        margin-top: 1rem;
-    }
+
+@media (379px <=width <=480px) {
 
     .account-content h1 {
-        color: #c86e5f;
-        font-size: 1.2rem;
-        margin-right: 1rem;
-        margin-top: 0.6rem;
+        font-size: 2rem;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
     }
 
-    .form-grid {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
 
     .account-content .form-grid input[type=text]:nth-child(10),
     .account-content .form-grid input[type=text]:nth-child(11),
+    .account-content .form-grid input[type=text]:nth-child(2),
     .account-content input[type=text]:nth-child(2),
-    .account-content input[type=text]:nth-child(3),
-    .account-content input[type=submit]:nth-child(3),
     .account-content input[type=password]:nth-child(1),
     .account-content input[type=password]:nth-child(2),
-    .account-content input[type=password]:nth-child(3),
-    .account-content input[type=password]:nth-child(4),
-    .account-content input[type=submit]:nth-child(4) {
-        width: 60%;
-        height: 20px;
+    .account-content input[type=password]:nth-child(3) {
+        width: 74%;
+        height: 10px
+    }
+
+
+
+    /* First Name */
+    .account-content .form-grid label:nth-child(1) {
+        position: absolute;
+        top: 6rem;
+
+        left: 0.5rem;
+
     }
 
     .account-content .form-grid input[type=text]:nth-child(10) {
-        margin-left: 0;
+        position: absolute;
+        top: 6rem;
+        right: 3rem;
+    }
 
+    /* Last Name */
+    .account-content .form-grid label:nth-child(2) {
+        top: 6rem;
+        left: -23.6rem;
     }
 
     .account-content .form-grid input[type=text]:nth-child(11) {
-
-        margin-left: 0.3rem;
-        margin-top: 0;
-
+        position: absolute;
+        top: 7.7rem;
+        right: 3rem;
     }
+
+    /* Email */
+    .account-content .form-grid label:nth-child(3) {
+        /* margin-top: -8.5rem; */
+        position: absolute;
+        top: 5.5rem;
+        left: 0.7rem;
+    }
+
 
     .account-content input[type=text]:nth-child(2) {
-        margin-left: 0rem;
-        margin-top: 0rem;
-
+        position: absolute;
+        top: 11rem;
+        left: 2.4rem;
     }
 
+    /* Submit */
     .account-content input[type=submit]:nth-child(3),
     .account-content input[type=submit]:nth-child(4) {
-        margin-top: 0rem;
-        height: 25px;
+        width: 74%;
+        position: absolute;
+        left: 2.4rem;
+        top: 15.5rem;
     }
 
-    .account-content .form-grid label:nth-child(1),
-    .account-content .form-grid label:nth-child(3),
-    .account-content .form-grid label:nth-child(4),
-    .account-content .form-grid label:nth-child(5),
-    .account-content .form-grid label:nth-child(6),
-    .account-content .form-grid label:nth-child(7),
-    .account-content .form-grid label:nth-child(8),
-    .account-content .form-grid label:nth-child(9) {
-        left: 2.5rem;
-    }
-
-    .account-content .form-grid label:nth-child(1) {
-        top: 0rem;
-    }
-
-    .account-content .form-grid label:nth-child(2) {
-        top: 0rem;
-        margin-left: -9rem !important;
-    }
-
-    .account-content .form-grid label:nth-child(3) {
-        margin-top: 5.8rem;
-
-    }
-
+    /*  Current Password */
     .account-content .form-grid label:nth-child(4) {
-        margin-top: 19rem;
-
-
-    }
-
-    .account-content .form-grid label:nth-child(5) {
-        margin-top: 27.5rem;
-    }
-
-    .account-content .form-grid label:nth-child(6) {
-
-        margin-top: 34rem;
-        font-size: 0.6rem;
-
-    }
-
-    .account-content .form-grid label:nth-child(7) {
-        margin-top: 35.5rem;
-        font-size: 0.6rem;
-
-    }
-
-    .account-content .form-grid label:nth-child(8) {
-        margin-top: 37rem;
-        font-size: 0.6rem;
-
-    }
-
-    .account-content .form-grid label:nth-child(9) {
-        margin-top: 39.5rem;
+        top: 3rem;
+        left: 1rem;
     }
 
     .account-content input[type=password]:nth-child(1) {
-        margin-top: 1.5rem;
+        position: absolute;
+        left: 2.7rem;
+        top: 10.5rem;
+
+    }
+
+    /* Password */
+    .account-content .form-grid label:nth-child(5) {
+        position: absolute;
+        top: 2.5rem;
+        left: 1rem;
     }
 
     .account-content input[type=password]:nth-child(2) {
-        margin-top: 1rem;
+        position: absolute;
+        top: 23.5rem;
+        left: 2.7rem;
+    }
 
+    .account-content .form-grid label:nth-child(6),
+    .account-content .form-grid label:nth-child(7),
+    .account-content .form-grid label:nth-child(8) {
+        position: absolute;
+        font-size: 0.8rem;
+        top: 1.5rem;
+        left: 1rem;
+    }
+
+    /* Password confirm */
+    .account-content .form-grid label:nth-child(9) {
+        position: absolute;
+        top: 1rem;
+        left: 1.3rem;
     }
 
     .account-content input[type=password]:nth-child(3) {
-        margin-top: 2.4rem;
+        position: absolute;
+        top: 27.2rem;
+        left: 3rem;
+    }
+
+    .account-content input[type=submit]:nth-child(4) {
+        position: absolute;
+        top: 36rem;
+        left: 3rem;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width:375px) {
+    @media (height >=812px) {
+        .account-content {
+            width: 95%;
+            height: 84%;
+            margin-top: 1rem;
+        }
+
+        .account-content h1 {
+            color: #c86e5f;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.6rem;
+        }
+
+        .form-grid {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(10),
+        .account-content .form-grid input[type=text]:nth-child(11),
+        .account-content input[type=text]:nth-child(2),
+        .account-content input[type=text]:nth-child(3),
+        .account-content input[type=submit]:nth-child(3),
+        .account-content input[type=password]:nth-child(1),
+        .account-content input[type=password]:nth-child(2),
+        .account-content input[type=password]:nth-child(3),
+        .account-content input[type=password]:nth-child(4),
+        .account-content input[type=submit]:nth-child(4) {
+            width: 60%;
+            height: 20px;
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(10) {
+            margin-left: 0;
+
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(11) {
+
+            margin-left: 0.3rem;
+            margin-top: 0;
+
+        }
+
+        .account-content input[type=text]:nth-child(2) {
+            margin-left: 0rem;
+            margin-top: 0rem;
+
+        }
+
+        .account-content input[type=submit]:nth-child(3),
+        .account-content input[type=submit]:nth-child(4) {
+            margin-top: 0rem;
+            height: 25px;
+        }
+
+        .account-content .form-grid label:nth-child(1),
+        .account-content .form-grid label:nth-child(3),
+        .account-content .form-grid label:nth-child(4),
+        .account-content .form-grid label:nth-child(5),
+        .account-content .form-grid label:nth-child(6),
+        .account-content .form-grid label:nth-child(7),
+        .account-content .form-grid label:nth-child(8),
+        .account-content .form-grid label:nth-child(9) {
+            left: 2.5rem;
+        }
+
+        .account-content .form-grid label:nth-child(1) {
+            top: 0rem;
+        }
+
+        .account-content .form-grid label:nth-child(2) {
+            top: 0rem;
+            margin-left: -9rem !important;
+        }
+
+        .account-content .form-grid label:nth-child(3) {
+            margin-top: 5.8rem;
+
+        }
+
+        .account-content .form-grid label:nth-child(4) {
+            position: absolute;
+            top: -2rem;
+        }
+
+        .account-content .form-grid label:nth-child(5) {
+            position: absolute;
+            top: -3.3rem;
+        }
+
+        .account-content .form-grid label:nth-child(6),
+        .account-content .form-grid label:nth-child(7),
+        .account-content .form-grid label:nth-child(8) {
+
+            position: absolute;
+            top: -5rem;
+            font-size: 0.6rem;
+
+        }
+
+        .account-content .form-grid label:nth-child(7) {
+            top: -5.5rem;
+        }
+
+
+
+        .account-content .form-grid label:nth-child(8) {
+            top: -5.9rem;
+
+
+        }
+
+        .account-content .form-grid label:nth-child(9) {
+            position: absolute;
+            top: -6rem;
+        }
+
+        .account-content input[type=password]:nth-child(1) {
+            position: absolute;
+            top: 13rem;
+        }
+
+        .account-content input[type=password]:nth-child(2) {
+            margin-top: 6rem;
+
+        }
+
+        .account-content input[type=password]:nth-child(3) {
+
+            margin-top: 4.4rem;
+
+
+        }
+
+
+    }
+
+
+
+}
+
+@media screen and (max-width:375px) {
+    @media (height <=668px) {
+        .account-content {
+            width: 95%;
+            height: 85%;
+            margin-top: 0rem;
+        }
+
+        .account-content h1 {
+            color: #c86e5f;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.6rem;
+        }
+
+        .form-grid {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(10),
+        .account-content .form-grid input[type=text]:nth-child(11),
+        .account-content input[type=text]:nth-child(2),
+        .account-content input[type=text]:nth-child(3),
+        .account-content input[type=submit]:nth-child(3),
+        .account-content input[type=password]:nth-child(1),
+        .account-content input[type=password]:nth-child(2),
+        .account-content input[type=password]:nth-child(3),
+        .account-content input[type=password]:nth-child(4),
+        .account-content input[type=submit]:nth-child(4) {
+            width: 60%;
+            height: 20px;
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(10) {
+            margin-left: 0;
+
+        }
+
+        .account-content .form-grid input[type=text]:nth-child(11) {
+
+            margin-left: 0.3rem;
+            margin-top: 0;
+
+        }
+
+        .account-content input[type=text]:nth-child(2) {
+            margin-left: 0rem;
+            margin-top: 0rem;
+
+        }
+
+        .account-content input[type=submit]:nth-child(3),
+        .account-content input[type=submit]:nth-child(4) {
+            margin-top: 0rem;
+            height: 25px;
+        }
+
+        .account-content .form-grid label:nth-child(1),
+        .account-content .form-grid label:nth-child(3),
+        .account-content .form-grid label:nth-child(4),
+        .account-content .form-grid label:nth-child(5),
+        .account-content .form-grid label:nth-child(6),
+        .account-content .form-grid label:nth-child(7),
+        .account-content .form-grid label:nth-child(8),
+        .account-content .form-grid label:nth-child(9) {
+            left: 2.5rem;
+        }
+
+        .account-content .form-grid label:nth-child(1) {
+            top: 0rem;
+        }
+
+        .account-content .form-grid label:nth-child(2) {
+            top: 0rem;
+            margin-left: -9rem !important;
+        }
+
+        .account-content .form-grid label:nth-child(3) {
+            margin-top: 5.8rem;
+
+        }
+
+        .account-content .form-grid label:nth-child(4) {
+            position: absolute;
+            top: -3rem;
+        }
+
+        .account-content .form-grid label:nth-child(5) {
+            position: absolute;
+            top: -3.3rem;
+        }
+
+        .account-content .form-grid label:nth-child(6),
+        .account-content .form-grid label:nth-child(7),
+        .account-content .form-grid label:nth-child(8) {
+
+            position: absolute;
+            top: -5.2rem;
+            font-size: 0.6rem;
+
+        }
+
+        .account-content .form-grid label:nth-child(7) {
+            top: -5.7rem;
+        }
+
+
+        .account-content .form-grid label:nth-child(8) {
+            top: -6.2rem;
+
+
+        }
+
+        .account-content .form-grid label:nth-child(9) {
+            position: absolute;
+            top: -7.5rem;
+        }
+
+        .account-content input[type=password]:nth-child(1) {
+            position: absolute;
+            top: 9rem;
+        }
+
+        .account-content input[type=password]:nth-child(2) {
+            margin-top: 6rem;
+
+        }
+
+        .account-content input[type=password]:nth-child(3) {
+
+            margin-top: 2.8rem;
+
+
+        }
+
 
     }
 
