@@ -2,6 +2,7 @@ const Factory = require('../controller/handlerFactory');
 const AppError = require('../utils/appError');
 const CatchAsync = require('../utils/CatchAsync');
 const User = require('../models/userModel');
+const { off } = require('../models/userModel');
 
 // get current user
 exports.getCurrentUser = (req, res, next) => {
@@ -42,6 +43,27 @@ exports.updateNonPasswords = CatchAsync(async (req, res, next) => {
     data: {
       user: updateUser,
     },
+  });
+});
+
+// update user data
+exports.updateUserData = CatchAsync(async (req, res, next) => {
+  const updateUser = await User.findByIdAndUpdate(
+    req.user.id,
+    {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+    },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+
+  res.status(200).render('account', {
+    title: 'Your account',
+    user: updateUser,
   });
 });
 
