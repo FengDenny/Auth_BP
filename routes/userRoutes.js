@@ -41,6 +41,11 @@ router.patch('/update_password', authController.updateUserPassword);
 
 router.patch('/update_information', userController.updateNonPasswords);
 
+// @route GET api/users/submit_information
+// @desc Update User Email, first name and last name
+// @access Private
+router.post('/submit_information', userController.updateUserData);
+
 router.get(
   '/user_account_settings',
   userController.getCurrentUser,
