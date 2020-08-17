@@ -201,6 +201,8 @@
 @media screen and (max-width:375px) {
     .account-content {
         width: 95%;
+        height: 84%;
+        margin-top: 1rem;
     }
 
     .account-content h1 {
