@@ -290,7 +290,7 @@ a {
 @media screen and (max-width:375px) {
 
   .navbar {
-    height: 10%;
+    height: 8%;
   }
 
   .navbar input[type="checkbox"],
